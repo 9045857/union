@@ -16,6 +16,11 @@ export const Search = ({ cb = Function.prototype }) => {
 
     return (
         <div className='row'>
+            <div className='search-type'>
+                <span className='selected-search-type'>Товары</span>
+                <span>Производители</span>
+            </div>
+
             <div className='search-area input-field col s12'>
                 <input
                     type='search'

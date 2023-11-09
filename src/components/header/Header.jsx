@@ -34,10 +34,10 @@ function Header() {
                     </Link>
 
                     <div className='main-search'>
-                        <div className='search-type'>
+                        {/* <div className='search-type'>
                             <span className='selected-search-type'>Товары</span>
                             <span>Производители</span>
-                        </div>
+                        </div> */}
                         <Search cb={'handleSearch'} />
                     </div>
 

@@ -1,6 +1,5 @@
 {
     "name": "marketplace",
-    "homepage": "https://9045857.github.io/union/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
