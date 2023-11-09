@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Menu } from '../Menu';
 
 import { Search } from '../search/Search';
+import { SearchTypeSelection } from '../search_type_selection/SearchTypeSelection';
 
 import logoImage from '../../images/logo-chemical-union.png';
 
@@ -34,10 +35,7 @@ function Header() {
                     </Link>
 
                     <div className='main-search'>
-                        {/* <div className='search-type'>
-                            <span className='selected-search-type'>Товары</span>
-                            <span>Производители</span>
-                        </div> */}
+                        <SearchTypeSelection cb={''} />
                         <Search cb={'handleSearch'} />
                     </div>
 

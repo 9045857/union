@@ -20,9 +20,6 @@ nav {
 }
 
 .enter-registration-link {
-    /* display: flex;
-    justify-content: flex-end;
-    color: white; */
     padding: 1px 15px;
     cursor: pointer;
 }
@@ -36,11 +33,6 @@ nav {
     border: #921d25;
 }
 
-
-
-/* @media only screen and (min-width: 601px) */
-
-/* @media only screen and (min-width: 601px) */
 @media (max-width: 1090px) {
     .main-search {
         width: 50vw;
@@ -57,7 +49,3 @@ nav {
         width: 90%;
     }
 }
-
-
-
-
