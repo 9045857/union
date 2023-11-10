@@ -30,7 +30,7 @@ function Header() {
                     >
                         <img
                             src={logoImage}
-                            alt='logo'
+                            alt='logo dfdf'
                         />
                     </Link>
 
