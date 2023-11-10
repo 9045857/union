@@ -3,12 +3,8 @@
 }
 
 .search-type span {
-    /* color: rgb(240, 167, 151); */
-    /* color: rgb(145, 144, 144); */
     color: rgb(159, 145, 142);
-    /* color: rgb(99, 195, 194); */
 
-    /* color: rgb(59, 173, 88); */
     font-weight: 100;
 
     font-size: x-large;
@@ -38,4 +34,3 @@
         margin: 0 4vw;
     }
 }
-
