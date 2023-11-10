@@ -20,7 +20,7 @@ export const Search = ({ cb = Function.prototype }) => {
                 <input
                     type='search'
                     id='search-field'
-                    placeholder='диксид титана Blr-698'
+                    placeholder='диоксид титана Blr-698'
                     onKeyDown={handleKey}
                     onChange={(e) => {
                         setValue(e.target.value);

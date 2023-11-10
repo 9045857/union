@@ -3,9 +3,38 @@ import { getListAllCategories } from '../../api';
 import { Preloader } from '../../components/Preloader';
 import { CategoriesList } from '../../components/CategoriesList';
 import { Search } from '../../components/search/Search';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useParams, useLocation, useHistory } from 'react-router-dom';
+
+import { CategoriesProducer } from '../../components/categoris_producer/CategoriesProducer';
+import {
+    getFilterByCategory,
+} from '../../api';
 
 export const Home = () => {
+    const [meals, setMeals] = useState([]);
+
+    const { category, area, ingredient } = useParams();
+
+//тестово заполним 
+  useEffect(() => {
+      const response = getFilterByCategory('Beef');
+      response.then((data) => setMeals(data.meals));
+  }, []);
+
+
+    // useEffect(() => {
+    //     const response = category
+    //         ? getFilterByCategory(category)
+    //         : area
+    //         ? getFilterByArea(area)
+    //         : getFilterByMainIngredient(ingredient);
+
+    //     response.then((data) => setMeals(data.meals));
+    // }, [category, area, ingredient]);
+
+
+
+    //
     const [catalog, setCatalog] = useState([]);
     const [fieldCatalog, setFilteredCatalog] = useState([]);
 
@@ -46,6 +75,8 @@ export const Home = () => {
 
     return (
         <>
+            <CategoriesProducer categories={meals} />
+
             {!catalog.length ? (
                 <Preloader />
             ) : (

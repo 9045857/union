@@ -21,16 +21,14 @@ function Header() {
                 </div>
             </div>
             <div className=''>
-                {/* #e8eaf6 indigo lighten-5 */}
                 <nav className='#ffffff white'>
-                    {/* nav-wrapper */}
                     <Link
                         to='/'
                         className='brand-logo'
                     >
                         <img
                             src={logoImage}
-                            alt='logo dfdf'
+                            alt='logo'
                         />
                     </Link>
 

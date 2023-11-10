@@ -1,6 +1,6 @@
 nav {
     padding: 0 1rem;
-    height: 150px;
+    height: 140px;
 }
 
 .top-line {
@@ -10,6 +10,7 @@ nav {
 .brand-logo img {
     height: 100px;
     padding-left: 3vw;
+    padding-top: 5px;
 }
 
 .enter-registration-label {
