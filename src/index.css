@@ -207,6 +207,8 @@ frame {
     }
 }
 
+
+
 .close-menu {
     max-width: 2em; /* блок занимает ширину родителя, max-width её ограничивает */
     min-height: 2em;
