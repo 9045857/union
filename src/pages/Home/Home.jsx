@@ -6,21 +6,18 @@ import { Search } from '../../components/search/Search';
 import { useParams, useLocation, useHistory } from 'react-router-dom';
 
 import { CategoriesProducer } from '../../components/categoris_producer/CategoriesProducer';
-import {
-    getFilterByCategory,
-} from '../../api';
+import { getFilterByCategory } from '../../api';
 
 export const Home = () => {
     const [meals, setMeals] = useState([]);
 
     const { category, area, ingredient } = useParams();
 
-//тестово заполним 
-  useEffect(() => {
-      const response = getFilterByCategory('Beef');
-      response.then((data) => setMeals(data.meals));
-  }, []);
-
+    //тестово заполним
+    useEffect(() => {
+        const response = getFilterByCategory('Beef');
+        response.then((data) => setMeals(data.meals));
+    }, []);
 
     // useEffect(() => {
     //     const response = category
@@ -31,8 +28,6 @@ export const Home = () => {
 
     //     response.then((data) => setMeals(data.meals));
     // }, [category, area, ingredient]);
-
-
 
     //
     const [catalog, setCatalog] = useState([]);
@@ -81,7 +76,7 @@ export const Home = () => {
                 <Preloader />
             ) : (
                 <>
-                    <Search cb={handleSearch} />
+                    {/* <Search cb={handleSearch} /> */}
 
                     {fieldCatalog.length ? (
                         <>
