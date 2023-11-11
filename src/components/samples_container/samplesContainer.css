@@ -1,0 +1,49 @@
+.samples-container {
+    width: 50%;
+
+    /* border: 1px solid rgb(184, 184, 184); */
+    border: 1px solid rgb(242, 241, 241);
+    background-color: white;
+    border-radius: 5px;
+
+    /* float: ; */
+
+    margin: 2rem 5px 0 5px;
+    padding: 5px;
+}
+
+.sample-container {
+    padding: 0;
+}
+
+.card.sample-card {
+    width: 24%;
+    float: left;
+}
+
+.samples-container-title h6 {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.card.sample-card {
+    box-shadow: none;
+    border: 1px solid rgb(242, 241, 241);
+    border-radius: 5px;
+
+    margin: 2px;
+}
+.card-image.sample-image img {
+    border-radius: 5px 5px 0 0;
+}
+
+.sample-price-text.card-title {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+}
+
+.card-content.sample-price-area {
+    padding: 0;
+}

@@ -7,6 +7,7 @@ import { useParams, useLocation, useHistory } from 'react-router-dom';
 
 import { CategoriesProducer } from '../../components/categoris_producer/CategoriesProducer';
 import { getFilterByCategory } from '../../api';
+import { SamplesContainer } from '../../components/samples_container/SamplesContainer';
 
 export const Home = () => {
     const [meals, setMeals] = useState([]);
@@ -71,6 +72,21 @@ export const Home = () => {
     return (
         <>
             <CategoriesProducer categories={meals} />
+
+            <div className='clearfix'></div>
+            <div className='samples-containers'>
+                <SamplesContainer
+                    title='Сертифицированные товары'
+                    samples={meals}
+                />
+
+                <SamplesContainer
+                    title='Бесплатные образцы'
+                    samples={meals}
+                />
+
+                <div className='clearfix'></div>
+            </div>
 
             {!catalog.length ? (
                 <Preloader />

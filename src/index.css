@@ -22,7 +22,7 @@ code {
 }
 
 .content {
-    min-height: calc(100vh - 70px - 64px);
+    min-height: calc(100vh - 140px - 64px);
     padding: 0.5rem;
 }
 
@@ -76,6 +76,15 @@ code {
 
 .img-meal {
     width: 60%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.samples-containers {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 720px) {
