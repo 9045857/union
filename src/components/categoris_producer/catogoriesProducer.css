@@ -72,7 +72,6 @@
 .btn-categories-block {
     height: 9rem;
     width: 3rem;
-    border-radius: 0.5rem;
 
     padding-inline-start: 0px;
 
@@ -80,9 +79,19 @@
 
     cursor: pointer;
 
-    -webkit-box-shadow: 0px 0px 2px 2px rgba(34, 60, 80, 0.11);
-    -moz-box-shadow: 0px 0px 2px 2px rgba(34, 60, 80, 0.11);
-    box-shadow: 0px 0px 2px 2px rgba(34, 60, 80, 0.11);
+    z-index: 1;
+}
+
+.btn-categories-block.right {
+    -webkit-box-shadow: -5px 0px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: -5px 0px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: -5px 0px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.btn-categories-block.left {
+    -webkit-box-shadow: 5px 0px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 0px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 0px 5px -5px rgba(34, 60, 80, 0.6);
 }
 
 .btn-categories-block i {
