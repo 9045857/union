@@ -12,9 +12,20 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
         return shuffled.slice(0, numElements); // возвращаем первые numElements элементов
     }
 
+    function addRandomPrice(array) {
+        const newArray = array.map((item) => ({
+            ...item,
+            price: `${Math.floor(Math.random() * (100 - 30 + 1)) + 30} руб.`,
+        }));
+
+        return newArray;
+    }
     // метод при загрузке выбирирает 4 случаных элемента из массива
     useEffect(() => {
-        const randomElements = getRandomElements(samples, 4); // получаем 4 случайных элемента
+        let randomElements = getRandomElements(samples, 4); // получаем 4 случайных элемента
+
+        randomElements = addRandomPrice(randomElements);
+
         setItems(() => randomElements);
         console.log(items);
     }, [samples]);
@@ -30,7 +41,6 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
                         <Sample
                             key={sample.idMeal}
                             {...sample}
-                            price={`${3 + Math.floor(Math.random() * 35)} руб.`}
                         />
                     ))}
                 </dir>
