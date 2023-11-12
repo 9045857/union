@@ -9,6 +9,11 @@ import { CategoriesProducer } from '../../components/categoris_producer/Categori
 import { getFilterByCategory } from '../../api';
 import { SamplesContainer } from '../../components/samples_container/SamplesContainer';
 
+import comertial_img_1 from '../../images/commercial/logistics_schemes.png';
+import comertial_img_2 from '../../images/commercial/boat.png';
+
+import './home.css';
+
 export const Home = () => {
     const [meals, setMeals] = useState([]);
 
@@ -87,6 +92,38 @@ export const Home = () => {
 
                 <div className='clearfix'></div>
             </div>
+
+            <a
+                href='https://www.sunasiatrans.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+            >
+                <div className='commercial-container'>
+                    <div className='img-commercial-area left'>
+                        <img
+                            src={comertial_img_1}
+                            alt='comertial_img'
+                        />
+                    </div>
+                    <div className='info-commercial-area'>
+                        <h5 className='white-text'>
+                            Специализированные поставки из Юго-Восточной Азии
+                        </h5>
+                        <p>
+                            Логистические задачи любой сложности
+                        </p>
+                        <div className='btn'>
+                            <span>Перейти</span>
+                        </div>
+                    </div>
+                    <div className='img-commercial-area right'>
+                        <img
+                            src={comertial_img_2}
+                            alt='comertial_img'
+                        />
+                    </div>
+                </div>
+            </a>
 
             {!catalog.length ? (
                 <Preloader />
