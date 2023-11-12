@@ -109,9 +109,6 @@ export const Home = () => {
                         <h5 className='white-text'>
                             Специализированные поставки из Юго-Восточной Азии
                         </h5>
-                        <p>
-                            Логистические задачи любой сложности
-                        </p>
                         <div className='btn'>
                             <span>Перейти</span>
                         </div>

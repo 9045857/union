@@ -1,13 +1,8 @@
 .commercial-container {
     width: 100%;
     height: 180px;
-    /* border: 1px solid red; */
-
-    /* padding: 10px 0; */
 
     margin: 10px 0;
-
-    /* border-radius: 5px; */
 
     cursor: pointer;
 
@@ -19,9 +14,7 @@
     background-image: url('../../images/commercial/commercial_fon3.jpeg');
     background: url('../../images/commercial/commercial_fon3.jpeg') #fff; /* если вдруг картинка будет недоступной */
 
-    /* float: left; */
     height: 100%;
-    /* width: calc(100%-300px); */
 
     flex: 1; /* Занимает оставшееся пространство */
     /* Если нужно центрировать содержимое по центру блока, добавьте следующие стили */
@@ -30,8 +23,12 @@
     align-items: center;
 }
 
+.info-commercial-area h5 {
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
 .img-commercial-area {
-    /* float: right; */
     height: 100%;
 }
 
@@ -45,4 +42,16 @@
 
 .img-commercial-area img {
     height: 100%;
+}
+
+@media (max-width: 1410px) {
+    .img-commercial-area.left {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .img-commercial-area.right {
+        display: none;
+    }
 }
