@@ -14,11 +14,15 @@
 
 .sample-container {
     padding: 0;
+
+    margin: 2%;
 }
 
 .card.sample-card {
     width: 24%;
+    min-width: 100px;
     float: left;
+    padding: 1%;
 }
 
 .samples-container-title h6 {
@@ -28,13 +32,14 @@
 
 .card.sample-card {
     box-shadow: none;
-    border: 1px solid rgb(242, 241, 241);
+    /* border: 1px solid rgb(242, 241, 241); */
     border-radius: 5px;
 
     margin: 2px;
 }
 .card-image.sample-image img {
-    border-radius: 5px 5px 0 0;
+    /* border-radius: 5px 5px 0 0; */
+    border-radius: 5px;
 }
 
 .sample-price-text.card-title {
