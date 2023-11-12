@@ -7,25 +7,26 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
     //const [categories, setCategories] = useState([]);
     const [items, setItems] = useState([]);
 
-    // useEffect(() => {
-    //     console.log(samples);
-    // }, [samples]);
+    function getRandomElements(arr, numElements) {
+        const shuffled = arr.slice().sort(() => 0.5 - Math.random()); // копируем и перемешиваем массив
+        return shuffled.slice(0, numElements); // возвращаем первые numElements элементов
+    }
 
     // метод при загрузке выбирирает 4 случаных элемента из массива
     useEffect(() => {
-        const arrayLenght = samples.length;
-        //TODO сделать случайное наполнение массива из сэмлов. Случайную цену, но что бы она не менялась. заполнить массив объектов.
+        const randomElements = getRandomElements(samples, 4); // получаем 4 случайных элемента
+        setItems(() => randomElements);
+        console.log(items);
     }, [samples]);
 
     return (
         <>
-
             <div className='samples-container'>
                 <dir className='samples-container-title'>
                     <h6>{title}</h6>
                 </dir>
                 <dir className='sample-container'>
-                    {samples.slice(0, 4).map((sample) => (
+                    {items.slice(0, 4).map((sample) => (
                         <Sample
                             key={sample.idMeal}
                             {...sample}
@@ -34,6 +35,6 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
                     ))}
                 </dir>
             </div>
-          </>
+        </>
     );
 };
