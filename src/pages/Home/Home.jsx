@@ -8,6 +8,7 @@ import { useParams, useLocation, useHistory } from 'react-router-dom';
 import { CategoriesProducer } from '../../components/categoris_producer/CategoriesProducer';
 import { getFilterByCategory } from '../../api';
 import { SamplesContainer } from '../../components/samples_container/SamplesContainer';
+import { Commercial } from '../../components/commercial/Commercial';
 
 import comertial_img_1 from '../../images/commercial/logistics_schemes.png';
 import comertial_img_2 from '../../images/commercial/boat.png';
@@ -79,6 +80,7 @@ export const Home = () => {
             <CategoriesProducer categories={meals} />
 
             <div className='clearfix'></div>
+
             <div className='samples-containers'>
                 <SamplesContainer
                     title='Сертифицированные товары'
@@ -93,34 +95,7 @@ export const Home = () => {
                 <div className='clearfix'></div>
             </div>
 
-            <a
-                href='https://www.sunasiatrans.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-            >
-                <div className='commercial-container'>
-                    <div className='img-commercial-area left'>
-                        <img
-                            src={comertial_img_1}
-                            alt='comertial_img'
-                        />
-                    </div>
-                    <div className='info-commercial-area'>
-                        <h5 className='white-text'>
-                            Специализированные поставки из Юго-Восточной Азии
-                        </h5>
-                        <div className='btn'>
-                            <span>Перейти</span>
-                        </div>
-                    </div>
-                    <div className='img-commercial-area right'>
-                        <img
-                            src={comertial_img_2}
-                            alt='comertial_img'
-                        />
-                    </div>
-                </div>
-            </a>
+            <Commercial />
 
             {!catalog.length ? (
                 <Preloader />
