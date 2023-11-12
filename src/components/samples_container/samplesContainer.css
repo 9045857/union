@@ -15,14 +15,29 @@
 .sample-container {
     padding: 0;
 
-    margin: 2%;
+    /* margin: 2%; */
+    width: 100%;
 }
 
 .card.sample-card {
-    width: 24%;
+    /* width: 24%;
     min-width: 100px;
     float: left;
-    padding: 1%;
+    padding: 1%; */
+
+    width: calc(
+        25% - 2px
+    ); /* Рассчитываем ширину каждой карточки, учитывая отступы между ними */
+    margin-right: 5px; /* Отступ между карточками */
+    float: left; /* Используем float для выравнивания по горизонтали */
+    box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
+
+    padding: 5px; /* Поля вокруг содержимого карточки */
+    min-width: 100px;
+}
+
+.card.sample-card:last-child {
+    margin-right: 0; /* Убираем отступ у последней карточки */
 }
 
 .samples-container-title h6 {

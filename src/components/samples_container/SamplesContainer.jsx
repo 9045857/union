@@ -28,6 +28,7 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
 
         setItems(() => randomElements);
         console.log(items);
+        // eslint-disable-next-line
     }, [samples]);
 
     return (
