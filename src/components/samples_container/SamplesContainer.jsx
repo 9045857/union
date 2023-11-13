@@ -15,7 +15,10 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
     function addRandomPrice(array) {
         const newArray = array.map((item) => ({
             ...item,
-            price: `${Math.floor(Math.random() * (100 - 30 + 1)) + 30} руб.`,
+            price: `${(
+                Math.floor(Math.random() * (10000 - 30 + 1)) / 100 +
+                30
+            ).toFixed(2)} руб.`,
         }));
 
         return newArray;
