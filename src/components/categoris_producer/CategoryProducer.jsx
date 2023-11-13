@@ -1,25 +1,21 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export const CatogoryProducer = (props) => {
-    const {
-        id = props.idMeal,
-        image = props.strMealThumb,
-        title = props.strMeal,
-        left = props.left,
-    } = props;
+export const CategoryProducer = (props) => {
+    const { idMeal: id, strMealThumb: image, strMeal: title, left } = props;
 
     useEffect(() => {
-        console.log(left);
         return;
     }, [left]);
 
     return (
-        <Link to={`/meal/${id}`}>
+        <Link
+            to={`/meal/${id}`}
+            className='card-producer-link'
+        >
             <div
                 className='card category-producer'
-                // style={{ left: { left } }}
-                style={{ left: left }}
+                style={{ left: `${left}px ` }}
             >
                 <div className='card-image image-category-producer'>
                     <img
