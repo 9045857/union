@@ -10,9 +10,6 @@ import { getFilterByCategory } from '../../api';
 import { SamplesContainer } from '../../components/samples_container/SamplesContainer';
 import { Commercial } from '../../components/commercial/Commercial';
 
-import comertial_img_1 from '../../images/commercial/logistics_schemes.png';
-import comertial_img_2 from '../../images/commercial/boat.png';
-
 import './home.css';
 
 export const Home = () => {
@@ -105,7 +102,7 @@ export const Home = () => {
 
                     {fieldCatalog.length ? (
                         <>
-                            <h6 className='go-back'>Categories</h6>
+                            {/* <h6 className='go-back'>Categories</h6> */}
                             <CategoriesList categories={fieldCatalog} />
                         </>
                     ) : (

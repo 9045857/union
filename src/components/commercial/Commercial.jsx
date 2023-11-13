@@ -6,7 +6,7 @@ import './commercial.css';
 export const Commercial = () => {
     return (
         <>
-        <h5 className='commercial-container-title'>Только для вас</h5>
+            <h5 className='commercial-container-title'>Только для вас</h5>
             <a
                 href='https://www.sunasiatrans.com/'
                 target='_blank'
