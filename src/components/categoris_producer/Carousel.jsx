@@ -57,7 +57,8 @@ export const Carousel = ({ categories = [] }) => {
             document.querySelector('.categories-producer-block').clientWidth
         );
 
-        const prevBtnDisabled = currentPosition === maxPosition;
+        const prevBtnDisabled =
+            currentPosition === maxPosition || currentPosition > maxPosition;
         document.getElementById('prevBtn').disabled = prevBtnDisabled;
         setIsLeftBtnVisible(prevBtnDisabled);
 
