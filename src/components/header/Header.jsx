@@ -37,7 +37,7 @@ function Header() {
                         <Search cb={'handleSearch'} />
                     </div>
 
-                    <ul
+                    {/* <ul
                         id='nav-mobile'
                         className='right hide-on-med-and-down'
                     >
@@ -47,7 +47,7 @@ function Header() {
                         <li>
                             <Link to='/contact'>Contact</Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </nav>
             </div>
         </>

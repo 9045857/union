@@ -28,6 +28,10 @@
     margin-bottom: 0px !important;
 }
 
+.carousel{
+    height: auto;
+}
+
 .categories-producer-block {
     white-space: nowrap;
     overflow: hidden;
