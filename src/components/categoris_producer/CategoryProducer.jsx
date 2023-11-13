@@ -4,10 +4,6 @@ import { useEffect } from 'react';
 export const CategoryProducer = (props) => {
     const { idMeal: id, strMealThumb: image, strMeal: title, left } = props;
 
-    useEffect(() => {
-        return;
-    }, [left]);
-
     return (
         <Link
             to={`/meal/${id}`}
