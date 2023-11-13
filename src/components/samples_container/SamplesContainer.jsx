@@ -41,7 +41,7 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
                     <h6>{title}</h6>
                 </dir>
                 <dir className='sample-container'>
-                    {items.slice(0, 4).map((sample) => (
+                    {items.map((sample) => (
                         <Sample
                             key={sample.idMeal}
                             {...sample}
