@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import { getListAllCategories } from '../../api';
 import { Preloader } from '../../components/Preloader';
 import { CategoriesList } from '../../components/CategoriesList';
-import { Search } from '../../components/search/Search';
 import { useParams, useLocation, useHistory } from 'react-router-dom';
 
 import { CategoriesProducer } from '../../components/categoris_producer/CategoriesProducer';
 import { getFilterByCategory } from '../../api';
 import { SamplesContainer } from '../../components/samples_container/SamplesContainer';
 import { Commercial } from '../../components/commercial/Commercial';
+import { ScrollToTopButton } from '../../components/scroll_to_top_button/ScrollToTopButton';
 
 import './home.css';
 
@@ -75,9 +75,7 @@ export const Home = () => {
     return (
         <>
             <CategoriesProducer categories={meals} />
-
             <div className='clearfix'></div>
-
             <div className='samples-containers'>
                 <SamplesContainer
                     title='Сертифицированные товары'
@@ -91,9 +89,7 @@ export const Home = () => {
 
                 <div className='clearfix'></div>
             </div>
-
             <Commercial />
-
             {!catalog.length ? (
                 <Preloader />
             ) : (
@@ -112,6 +108,7 @@ export const Home = () => {
                     )}
                 </>
             )}
+            <ScrollToTopButton />
         </>
     );
 };

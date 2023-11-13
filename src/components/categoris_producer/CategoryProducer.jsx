@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 
 export const CategoryProducer = (props) => {
     const { idMeal: id, strMealThumb: image, strMeal: title, left } = props;
