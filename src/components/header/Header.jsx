@@ -11,7 +11,7 @@ import './header.css';
 function Header() {
     return (
         <>
-            <Menu />
+            {/* <Menu /> */}
             <div className='top-line #ec407a pink lighten-1'>
                 <div className='enter-registration-label'>
                     <i className=' material-icons'>perm_identity</i>

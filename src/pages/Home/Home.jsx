@@ -9,6 +9,7 @@ import { getFilterByCategory } from '../../api';
 import { SamplesContainer } from '../../components/samples_container/SamplesContainer';
 import { Commercial } from '../../components/commercial/Commercial';
 import { ScrollToTopButton } from '../../components/scroll_to_top_button/ScrollToTopButton';
+import { ProductsList } from '../../components/product_cards_list/ProductList';
 
 import './home.css';
 
@@ -99,7 +100,8 @@ export const Home = () => {
                     {fieldCatalog.length ? (
                         <>
                             {/* <h6 className='go-back'>Categories</h6> */}
-                            <CategoriesList categories={fieldCatalog} />
+                            {/* <CategoriesList categories={fieldCatalog} /> */}
+                            <ProductsList initialProducts={fieldCatalog} />
                         </>
                     ) : (
                         <h1 className='product-description'>

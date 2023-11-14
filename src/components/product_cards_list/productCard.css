@@ -1,0 +1,28 @@
+.product-card.card {
+    height: 300px;
+}
+
+.product-photo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product-title {
+    padding: 10px !important;
+}
+
+.product-price {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.min-order {
+    margin-top: 5px;
+    font-size: 14px;
+}
