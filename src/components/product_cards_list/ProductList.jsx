@@ -34,7 +34,7 @@ export const ProductsList = ({ initialProducts = [] }) => {
     }, [visibleProducts]);
 
     return (
-        <div>
+        <div className='list'>
             {products.slice(0, visibleProducts).map((product) => (
                 <ProductCard
                     key={product.strCategory}
