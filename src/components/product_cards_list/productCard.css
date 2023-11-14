@@ -1,3 +1,42 @@
+.product-card {
+    /* Добавляем тень и переход */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+
+    /* Отключаем перекрытие других карточек */
+    position: relative;
+    z-index: 1;
+}
+
+.product-card:hover {
+    /* Увеличиваем тень и удлиняем карточку */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    /* height: 350px !important; */
+
+    /* Показываем кнопку "В корзину" */
+    overflow: visible;
+}
+
+.add-to-cart-button {
+    /* Скрываем кнопку "В корзину" по умолчанию */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.product-card:hover .add-to-cart-button {
+    /* Показываем кнопку при наведении */
+    visibility: visible;
+    opacity: 1;
+
+    position: absolute;
+    /* bottom: 10px; */
+    right: 10px;
+    top: 10px;
+}
+
+/* --------- */
 .product-card.card {
     height: 300px;
 }

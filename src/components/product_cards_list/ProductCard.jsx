@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './productCard.css';
 
 export const ProductCard = (props) => {
-    // { photo, title, fullTitle, price, minOrder }
     const {
         photo = props.strCategoryThumb,
         // fullTitle = props.strCategory,
@@ -17,14 +16,19 @@ export const ProductCard = (props) => {
     const truncatedTitle =
         title.length > 40 ? `${title.slice(0, 40)}...` : title;
 
+    const handleButtonClick = (event) => {
+        event.preventDefault(); // Остановка действия по умолчанию
+
+        // Ваши действия по нажатию на кнопку
+        console.log('Button clicked!');
+    };
+
     return (
         <Link
             to={`/category/${link}`}
             style={{ textDecoration: 'none', color: 'inherit' }}
         >
-            <div
-                className='product-card card'
-            >
+            <div className='product-card card'>
                 <img
                     className='product-photo card-image'
                     src={photo}
@@ -40,6 +44,12 @@ export const ProductCard = (props) => {
                     <div className='product-price'>{price}</div>
                     <div className='min-order'>{`Мин. заказ: ${minOrder}`}</div>
                 </div>
+                <button
+                    className='add-to-cart-button #ec407a pink lighten-1 waves-effect waves-light btn-small'
+                    onClick={handleButtonClick}
+                >
+                    В корзину
+                </button>
             </div>
         </Link>
     );
