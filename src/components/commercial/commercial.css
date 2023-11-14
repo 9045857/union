@@ -53,10 +53,18 @@
     .img-commercial-area.left {
         display: none;
     }
+
+    .info-commercial-area {
+        border-radius: 5px 0 0 5px;
+    }
 }
 
 @media (max-width: 800px) {
     .img-commercial-area.right {
         display: none;
+    }
+
+    .info-commercial-area {
+        border-radius: 5px;
     }
 }
