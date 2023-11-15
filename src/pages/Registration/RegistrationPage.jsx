@@ -1,145 +1,104 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './registration.css';
 
 export const RegistrationPage = () => {
-    const [country, setCountry] = useState('Kazakhstan');
-    const [role, setRole] = useState('Supplier');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [companyName, setCompanyName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [agreementChecked, setAgreementChecked] = useState(false);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        // Здесь вы можете добавить логику отправки данных на сервер
-        // Например, использовать fetch или библиотеку axios
-
-        console.log('Submitted:', {
-            country,
-            role,
-            firstName,
-            lastName,
-            companyName,
-            phone,
-            email,
-            password,
-            agreementChecked,
-        });
-    };
-
     return (
         <div className='registration-container'>
+            <h5 className='registration-container-title'>
+                Присоединяйся к <br />
+                Chemical Union
+            </h5>
+
             <div className='warning'>
+                <i class='material-icons'>error</i>
                 Пожалуйста, используйте только английский алфавит.
             </div>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Страна/Регион:
-                    <select
-                        value={country}
-                        onChange={(e) => setCountry(e.target.value)}
-                    >
-                        <option value='Kazakhstan'>Казахстан</option>
-                        {/* Добавьте другие варианты стран/регионов по мере необходимости */}
-                    </select>
-                </label>
+            <form className='registration-form'>
+                <label htmlFor='country'>Страна/Регион:</label>
+                <select
+                    id='country'
+                    className='form-input'
+                >
+                    <option value='Kazakhstan'>Казахстан</option>
+                    {/* Добавьте другие варианты стран/регионов по вашему выбору */}
+                </select>
 
-                <label>
-                    Я:
-                    <select
-                        value={role}
-                        onChange={(e) => setRole(e.target.value)}
-                    >
-                        <option value='Supplier'>Поставщик</option>
-                        <option value='Buyer'>Покупатель</option>
-                        <option value='Both'>Оба</option>
-                    </select>
-                </label>
+                <label htmlFor='role'>Я:</label>
+                <select
+                    id='role'
+                    className='form-input'
+                >
+                    <option value='supplier'>Поставщик</option>
+                    <option value='buyer'>Покупатель</option>
+                    <option value='both'>Оба</option>
+                </select>
 
-                <label>
-                    ФИО:
-                    <input
-                        type='text'
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                    />
-                </label>
+                <label htmlFor='firstName'>ФИО: Имя</label>
+                <input
+                    type='text'
+                    id='firstName'
+                    className='form-input'
+                />
 
-                <label>
-                    Фамилия:
-                    <input
-                        type='text'
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                    />
-                </label>
+                <label htmlFor='lastName'>Фамилия</label>
+                <input
+                    type='text'
+                    id='lastName'
+                    className='form-input'
+                />
 
-                <label>
-                    Название Компании:
-                    <input
-                        type='text'
-                        value={companyName}
-                        onChange={(e) => setCompanyName(e.target.value)}
-                    />
-                </label>
+                <label htmlFor='companyName'>Название Компании:</label>
+                <input
+                    type='text'
+                    id='companyName'
+                    className='form-input'
+                />
 
-                <label>
-                    Телефон:
-                    <input
-                        type='text'
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                    />
-                </label>
+                <label htmlFor='phone'>Телефон:</label>
+                <input
+                    type='text'
+                    id='phone'
+                    className='form-input'
+                />
 
-                <label>
-                    Электронная почта:
-                    <input
-                        type='email'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                </label>
+                <label htmlFor='email'>Электронная почта:</label>
+                <input
+                    type='email'
+                    id='email'
+                    className='form-input'
+                />
 
-                <label>
-                    Создать Пароль:
-                    <input
-                        type='password'
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </label>
+                <label htmlFor='password'>Создать Пароль:</label>
+                <input
+                    type='password'
+                    id='password'
+                    className='form-input'
+                />
 
-                <label>
-                    Введите код, изображенный на картине:
-                    {/* Здесь вы можете добавить механизм капчи или другие меры безопасности */}
-                    <input type='text' />
-                </label>
+                <label htmlFor='captcha'>Введите код:</label>
+                <input
+                    type='text'
+                    id='captcha'
+                    className='form-input'
+                />
 
-                <div>
-                    <input
-                        type='checkbox'
-                        id='agreement'
-                        checked={agreementChecked}
-                        onChange={() => setAgreementChecked(!agreementChecked)}
-                    />
-                    <label htmlFor='agreement'>
-                        При создание моего счета, я соглашаюсь:
+                <button
+                    type='submit'
+                    className='submit-button'
+                >
+                    Отправить
+                </button>
+
+                <div className='agreement'>
+                    <p>
+                        При создании моего счета, я соглашаюсь:
                         <br />
-                        <a href='/membership-agreement'>
-                            Alibaba.com соглашение о свободной Членство
-                        </a>
+                        <a href='/'>Быть частью сообщества Chemical Union</a>
                         <br />
-                        Получать emails, связанные с членством и службой из
-                        Alibaba.com
-                    </label>
+                        Получать на e-mail новости и предложение от Chemical
+                        Union
+                    </p>
                 </div>
-
-                <button type='submit'>Отправить</button>
             </form>
         </div>
     );
