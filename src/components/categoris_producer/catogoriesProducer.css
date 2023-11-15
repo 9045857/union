@@ -28,7 +28,7 @@
     margin-bottom: 0px !important;
 }
 
-.carousel{
+.carousel {
     height: auto;
 }
 
@@ -119,4 +119,8 @@
 
 .visually-hidden {
     visibility: hidden;
+}
+
+.btn-categories-block:active {
+    color: cadetblue;
 }
