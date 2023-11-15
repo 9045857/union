@@ -7,10 +7,32 @@ nav {
     height: 30px;
 }
 
-.brand-logo img {
-    height: 100px;
+.logo-container {
+    position: relative;
+    /* border: 1px solid red; */
+    height: 140px;
     padding-left: 3vw;
     padding-top: 5px;
+}
+
+.brand-logo img {
+    height: 100px;
+}
+
+nav .brand-logo {
+    color: #ffffff;
+    line-height: 22px;
+}
+.slogan {
+    font-size: 14px;
+    padding-left: 15px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background: rgb(179, 195, 108);
+    width: 160px;
+    margin-top: 8px;
+    /* position: absolute;
+    bottom: 0px; */
 }
 
 .enter-registration-label {

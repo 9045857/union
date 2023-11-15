@@ -30,10 +30,13 @@ function Header() {
                         to='/'
                         className='brand-logo'
                     >
-                        <img
-                            src={logoImage}
-                            alt='logo'
-                        />
+                        <div className='logo-container'>
+                            <img
+                                src={logoImage}
+                                alt='logo'
+                            />
+                            <div className='slogan'>world trade area</div>
+                        </div>
                     </Link>
 
                     <div className='main-search'>
