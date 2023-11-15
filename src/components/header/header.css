@@ -23,6 +23,7 @@ nav {
 .enter-registration-link {
     padding: 1px 15px;
     cursor: pointer;
+    color: white;
 }
 
 .main-search {
