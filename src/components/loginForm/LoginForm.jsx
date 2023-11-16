@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './loginForm.css';
 
 export const LoginForm = () => {
@@ -31,7 +32,7 @@ export const LoginForm = () => {
                         onBlur={() => setIsLoginInput(false)}
                     />
                 </div>
-                <div className='form-group input-field'>
+                <div className='form-group input-field password-input-field'>
                     <i
                         className={`material-icons prefix ${
                             isPasswordInput ? 'used-input' : ''
@@ -69,7 +70,7 @@ export const LoginForm = () => {
                 <div className='forgot-password'>
                     <a
                         href='/reset-password'
-                        className='forgot-password-link blue-text text-darken-2'
+                        className='forgot-password-link'
                     >
                         Забыли пароль?
                     </a>
@@ -77,7 +78,7 @@ export const LoginForm = () => {
                 <button
                     type='button'
                     onClick={handleLogin}
-                    className='login-button btn'
+                    className='login-button btn '
                 >
                     Войти
                 </button>
@@ -85,12 +86,12 @@ export const LoginForm = () => {
             <div className='register-link card-action'>
                 <p>
                     Новый пользователь?{' '}
-                    <a
-                        href='/register'
-                        className='register-link blue-text text-darken-2'
+                    <Link
+                        to='/join'
+                        className='register-link-link'
                     >
                         Зарегистрируйтесь здесь
-                    </a>
+                    </Link>
                 </p>
             </div>
         </div>
