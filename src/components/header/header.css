@@ -47,6 +47,9 @@ nav .brand-logo {
     cursor: pointer;
     color: white;
 }
+.enter-registration-link:active{
+color: #f8c8cb;
+}
 
 .main-search {
     width: 60vw;

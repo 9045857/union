@@ -15,13 +15,16 @@ function Header() {
             <div className='top-line #ec407a pink lighten-1'>
                 <div className='enter-registration-label'>
                     <i className=' material-icons'>perm_identity</i>
-                    <span className='enter-registration-link'> Войти</span>
+                    <Link to='/login'>
+                        <span className='enter-registration-link'> Войти</span>
+                    </Link>
                     <span> | </span>
                     <Link to='/join'>
                         <span className='enter-registration-link '>
                             Регистрация
                         </span>
                     </Link>
+                    <i className=' material-icons'>shopping_cart</i>
                 </div>
             </div>
             <div className=''>

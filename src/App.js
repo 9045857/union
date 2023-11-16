@@ -19,6 +19,7 @@ import { Meals } from './pages/Meals';
 import { ContextProvider } from './hooks/context';
 
 import { RegistrationPage } from './pages/Registration/RegistrationPage';
+import { LoginPage } from './pages/LoginPage/LoginPage';
 
 function App() {
     return (
@@ -73,6 +74,10 @@ function App() {
                             <Route
                                 path='/join'
                                 component={RegistrationPage}
+                            />
+                            <Route
+                                path='/login'
+                                component={LoginPage}
                             />
                             <Route
                                 component={NotFound} //блок без path - нарисуется при вводе любого другого адреса, чем выше
