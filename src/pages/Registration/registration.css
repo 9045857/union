@@ -71,3 +71,7 @@
 .agreement a {
     color: rgb(236, 64, 122);
 }
+
+select {
+    display: block;
+}

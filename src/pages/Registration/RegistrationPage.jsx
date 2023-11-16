@@ -10,20 +10,20 @@ export const RegistrationPage = () => {
             </h5>
 
             <div className='warning'>
-                <i class='material-icons'>error</i>
+                <i className='material-icons'>error</i>
                 Пожалуйста, используйте только английский алфавит.
             </div>
             <form className='registration-form'>
                 <label htmlFor='country'>Страна/Регион:</label>
                 <select
                     id='country'
-                    className='form-input'
+                    className='form-input input-field col s12'
                 >
                     <option value='Kazakhstan'>Казахстан</option>
                     {/* Добавьте другие варианты стран/регионов по вашему выбору */}
                 </select>
 
-                <label htmlFor='role'>Я:</label>
+                <label htmlFor='role'>Ваш статус:</label>
                 <select
                     id='role'
                     className='form-input'
@@ -33,54 +33,64 @@ export const RegistrationPage = () => {
                     <option value='both'>Оба</option>
                 </select>
 
-                <label htmlFor='firstName'>ФИО: Имя</label>
+                <label>ФИО:</label>
+
                 <input
                     type='text'
                     id='firstName'
                     className='form-input'
                 />
+                <label htmlFor='firstName'>Имя</label>
 
-                <label htmlFor='lastName'>Фамилия</label>
                 <input
                     type='text'
                     id='lastName'
                     className='form-input'
                 />
+                <label htmlFor='lastName'>Фамилия</label>
 
-                <label htmlFor='companyName'>Название Компании:</label>
                 <input
                     type='text'
                     id='companyName'
                     className='form-input'
                 />
+                <label htmlFor='companyName'>Название Компании</label>
 
-                <label htmlFor='phone'>Телефон:</label>
                 <input
                     type='text'
                     id='phone'
                     className='form-input'
                 />
+                <label htmlFor='phone'>Телефон</label>
 
-                <label htmlFor='email'>Электронная почта:</label>
                 <input
                     type='email'
                     id='email'
                     className='form-input'
                 />
+                <label htmlFor='email'>Электронная почта</label>
 
-                <label htmlFor='password'>Создать Пароль:</label>
+                <label htmlFor='password'>Создать:</label>
                 <input
                     type='password'
                     id='password'
                     className='form-input'
                 />
+                <label htmlFor='password'>Пароль</label>
 
-                <label htmlFor='captcha'>Введите код:</label>
+                <input
+                    type='password'
+                    id='password'
+                    className='form-input'
+                />
+                <label htmlFor='password'>Продублируйте пароль</label>
+
                 <input
                     type='text'
                     id='captcha'
                     className='form-input'
                 />
+                <label htmlFor='captcha'>Введите код</label>
 
                 <button
                     type='submit'
@@ -91,12 +101,21 @@ export const RegistrationPage = () => {
 
                 <div className='agreement'>
                     <p>
-                        При создании моего счета, я соглашаюсь:
-                        <br />
-                        <a href='/'>Быть частью сообщества Chemical Union</a>
-                        <br />
-                        Получать на e-mail новости и предложение от Chemical
-                        Union
+                        <label>
+                            <input type='checkbox' />
+                            <span>
+                                Согласен на обработку персональных данных
+                            </span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type='checkbox' />
+                            <span>
+                                Хочу получать на e-mail новости и предложение от
+                                Chemical Union
+                            </span>
+                        </label>
                     </p>
                 </div>
             </form>
