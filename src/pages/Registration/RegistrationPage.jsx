@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './registration.css';
 
+// import { Captcha } from '../../components/captcha/Captcha';
+
 export const RegistrationPage = () => {
+    const [countries, setCountries] = useState([
+        'Россия',
+        'Казахстан',
+        'Амэрика',
+    ]);
     return (
         <div className='registration-container'>
             <h5 className='registration-container-title'>
@@ -19,10 +26,17 @@ export const RegistrationPage = () => {
                     id='country'
                     className='form-input input-field col s12'
                 >
-                    <option value='Kazakhstan'>Казахстан</option>
+                    {countries.map((country) => (
+                        <option
+                            key={country}
+                            value={country}
+                        >
+                            {country}
+                        </option>
+                    ))}
+
                     {/* Добавьте другие варианты стран/регионов по вашему выбору */}
                 </select>
-
                 <label htmlFor='role'>Ваш статус:</label>
                 <select
                     id='role'
@@ -32,65 +46,76 @@ export const RegistrationPage = () => {
                     <option value='buyer'>Покупатель</option>
                     <option value='both'>Оба</option>
                 </select>
-
                 <label>ФИО:</label>
-
                 <input
                     type='text'
                     id='firstName'
                     className='form-input'
                 />
                 <label htmlFor='firstName'>Имя</label>
-
                 <input
                     type='text'
                     id='lastName'
                     className='form-input'
                 />
                 <label htmlFor='lastName'>Фамилия</label>
-
                 <input
                     type='text'
                     id='companyName'
                     className='form-input'
                 />
                 <label htmlFor='companyName'>Название Компании</label>
-
                 <input
                     type='text'
                     id='phone'
                     className='form-input'
                 />
                 <label htmlFor='phone'>Телефон</label>
-
                 <input
                     type='email'
                     id='email'
                     className='form-input'
                 />
                 <label htmlFor='email'>Электронная почта</label>
-
-                <label htmlFor='password'>Создать:</label>
+                {/* 
+                <div className='input-field inline'>
+                    <input
+                        id='email_inline'
+                        type='email'
+                        className='validate'
+                    />
+                    <label htmlFor='email_inline'>Email</label>
+                    <span
+                        className='helper-text'
+                        data-error='wrong'
+                        data-success='right'
+                    >
+                        Helper text
+                    </span>
+                </div> */}
+                <label htmlFor='password'>Создадим пароль:</label>
                 <input
                     type='password'
                     id='password'
                     className='form-input'
                 />
-                <label htmlFor='password'>Пароль</label>
-
+                <label htmlFor='password'>
+                    Введите секретный код и запомните его
+                </label>
                 <input
                     type='password'
-                    id='password'
+                    id='password-confirmation'
                     className='form-input'
                 />
-                <label htmlFor='password'>Продублируйте пароль</label>
+                <label htmlFor='password'>Введите пароль еще раз</label>
 
-                <input
+                {/* <input
                     type='text'
                     id='captcha'
                     className='form-input'
                 />
-                <label htmlFor='captcha'>Введите код</label>
+                <label htmlFor='captcha'>Введите код</label> */}
+                {/* <Captcha /> */}
 
                 <button
                     type='submit'
@@ -98,7 +123,6 @@ export const RegistrationPage = () => {
                 >
                     Отправить
                 </button>
-
                 <div className='agreement'>
                     <p>
                         <label>
