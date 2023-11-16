@@ -22,7 +22,7 @@ code {
 }
 
 .content {
-    min-height: calc(100vh - 140px - 64px);
+    min-height: calc(100vh - 170px - 70px);
     padding: 0.5rem;
 }
 
@@ -245,6 +245,11 @@ frame {
         z-index: 100;
 
         top: 3px;
+    }
+
+    .content {
+        min-height: calc(100vh - 280px - 70px);
+        padding: 0.5rem;
     }
 }
 
