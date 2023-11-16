@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './registration.css';
 
-// import { Captcha } from '../../components/captcha/Captcha';
-
 export const RegistrationPage = () => {
     const [countries, setCountries] = useState([
         'Россия',
