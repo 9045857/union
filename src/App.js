@@ -23,7 +23,7 @@ import { RegistrationPage } from './pages/Registration/RegistrationPage';
 function App() {
     return (
         <>
-            <Router basename='/react-food'>
+            <Router basename='/chemical-union'>
                 <ContextProvider>
                     <Header />
                     <main className='container content'>
