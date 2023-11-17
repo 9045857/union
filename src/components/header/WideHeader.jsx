@@ -1,25 +1,16 @@
 import { Link } from 'react-router-dom';
-import { Menu } from '../Menu';
 
 import { Search } from '../search/Search';
 import { SearchTypeSelection } from '../search_type_selection/SearchTypeSelection';
 
-// import logoImage from '../../images/logo-chemical-union.png';
+import logoImage from '../../images/logo/logo-chemical-union.png';
 
-// import './header.css';
+import './wideHeader.css';
 
-import { WideHeader } from './WideHeader';
-import { NarrowHeader } from './NarrowHeader';
-
-function Header() {
+function WideHeader() {
     return (
         <>
-            {/* <Menu /> */}
-
-            {/* <WideHeader /> */}
-            <NarrowHeader />
-
-            {/* <div className='top-line #ec407a pink lighten-1'>
+            <div className='top-line #ec407a pink lighten-1'>
                 <div className='icons-area'>
                     <div className='enter-registration-label'>
                         <i className=' material-icons header-market-icon person-icon'>
@@ -80,21 +71,9 @@ function Header() {
                         <Search cb={'handleSearch'} />
                     </div>
                 </nav>
-            </div> */}
-
-            {/* <ul
-                        id='nav-mobile'
-                        className='right hide-on-med-and-down'
-                    >
-                        <li>
-                            <Link to='/about'>About</Link>
-                        </li>
-                        <li>
-                            <Link to='/contact'>Contact</Link>
-                        </li>
-                    </ul> */}
+            </div>
         </>
     );
 }
 
-export { Header };
+export { WideHeader };

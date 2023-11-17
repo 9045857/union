@@ -1,0 +1,113 @@
+nav {
+    padding: 0 1rem;
+    height: 140px;
+}
+
+.spacer {
+    margin-left: 15px;
+}
+
+.top-line {
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.icons-area {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Прижимаем вправо */
+    height: 100%; /* Добавьте высоту 100% */
+}
+
+.header-market-icon {
+    color: #ffffff;
+    margin-right: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Выравниваем по центру вертикально */
+}
+
+.person-icon {
+    margin: 0;
+}
+
+.enter-registration-label {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.enter-registration-link {
+    padding: 0 15px;
+
+    cursor: pointer;
+    color: white;
+}
+.enter-registration-link:active {
+    color: #f8c8cb;
+}
+
+.main-search {
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 2px solid;
+    border: #921d25;
+}
+
+.enter-registration-label i {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.logo-container {
+    position: relative;
+    height: 140px;
+    padding-left: 3vw;
+    padding-top: 5px;
+}
+
+.brand-logo img {
+    height: 100px;
+}
+
+nav .brand-logo {
+    color: #ffffff;
+    line-height: 22px;
+}
+.slogan {
+    font-size: 14px;
+    padding-left: 15px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background: rgb(179, 195, 108);
+    width: 160px;
+    margin-top: 8px;
+}
+
+@media (max-width: 1090px) {
+    .main-search {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        height: 250px;
+    }
+
+    .main-search {
+        padding-top: 100px;
+        width: 90%;
+    }
+    .slogan {
+        display: none;
+    }
+}

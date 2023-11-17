@@ -1,0 +1,39 @@
+.nh-brand-logo {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    width: 400px;
+    padding-left: 5vw;
+    text-decoration: none;
+}
+
+.nh-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nh-logo-pic-image {
+    width: auto;
+    height: 100%;
+    margin-right: -20px; /* Подберите нужный вам отступ */
+}
+
+.nh-logo-text {
+    width: auto;
+    height: 100%;
+    margin-left: -20px; /* Подберите нужный вам отступ */
+    padding-right: 20px;
+}
+
+.nh-slogan {
+    color: white;
+    font-size: 9px;
+    padding-left: 2px;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    background: rgb(179, 195, 108);
+    width: 80px;
+    /* margin-left: 8px; */
+    transform: rotate(270deg);
+    white-space: nowrap;
+}
