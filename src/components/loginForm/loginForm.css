@@ -9,8 +9,16 @@
 }
 
 .login-title {
-    color: #000000;
     text-align: center;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ffe6ef;
+}
+
+.password-input-field > i,
+.login-input-field > i {
+    color: #7b7b7b;
 }
 
 .form-group > i.used-input,
@@ -46,6 +54,7 @@
 
 .login-button {
     width: 100%;
+    background: rgb(179, 195, 108);
 }
 
 .register-link {

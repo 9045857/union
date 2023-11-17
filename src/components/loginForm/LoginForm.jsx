@@ -15,7 +15,7 @@ export const LoginForm = () => {
         <div className='login-form'>
             <h5 className='login-title'>Вход</h5>
             <form>
-                <div className='form-group input-field col s6'>
+                <div className='form-group input-field login-input-field'>
                     <i
                         className={`material-icons prefix ${
                             isLoginInput ? 'used-input' : ''

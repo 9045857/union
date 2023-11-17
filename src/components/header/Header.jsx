@@ -13,18 +13,44 @@ function Header() {
         <>
             {/* <Menu /> */}
             <div className='top-line #ec407a pink lighten-1'>
-                <div className='enter-registration-label'>
-                    <i className=' material-icons'>perm_identity</i>
-                    <Link to='/login'>
-                        <span className='enter-registration-link'> Войти</span>
+                <div className='icons-area'>
+                    <div className='enter-registration-label'>
+                        <i className=' material-icons header-market-icon person-icon'>
+                            perm_identity
+                        </i>
+                        <Link to='/login '>
+                            <span className='enter-registration-link'>
+                                Войти
+                            </span>
+                        </Link>
+                        <span> | </span>
+                        <Link to='/join'>
+                            <span className='enter-registration-link '>
+                                Регистрация
+                            </span>
+                        </Link>
+                    </div>
+                    <span className='spacer'>{'  '}</span>
+                    <Link
+                        to='/join'
+                        className='header-market-icon'
+                    >
+                        <i className=' material-icons'>email</i>
                     </Link>
-                    <span> | </span>
-                    <Link to='/join'>
-                        <span className='enter-registration-link '>
-                            Регистрация
-                        </span>
+                    <Link
+                        to='/join'
+                        className='header-market-icon'
+                    >
+                        <i className=' material-icons'>local_shipping</i>
                     </Link>
-                    <i className=' material-icons'>shopping_cart</i>
+                    <Link
+                        to='/join'
+                        className='header-market-icon'
+                    >
+                        <i className=' material-icons header-market-icon'>
+                            shopping_cart
+                        </i>
+                    </Link>
                 </div>
             </div>
             <div className=''>

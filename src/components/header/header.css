@@ -3,13 +3,72 @@ nav {
     height: 140px;
 }
 
-.top-line {
-    height: 30px;
+.spacer {
+    margin-left: 15px;
 }
 
+.top-line {
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.icons-area {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Прижимаем вправо */
+    height: 100%; /* Добавьте высоту 100% */
+}
+
+.header-market-icon {
+    color: #ffffff;
+    margin-right: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Выравниваем по центру вертикально */
+}
+
+.person-icon {
+    margin: 0;
+}
+
+.enter-registration-label {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.enter-registration-link {
+    padding: 0 15px;
+
+    cursor: pointer;
+    color: white;
+}
+.enter-registration-link:active {
+    color: #f8c8cb;
+}
+
+.main-search {
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 2px solid;
+    border: #921d25;
+}
+
+.enter-registration-label i {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .logo-container {
     position: relative;
-    /* border: 1px solid red; */
     height: 140px;
     padding-left: 3vw;
     padding-top: 5px;
@@ -31,42 +90,6 @@ nav .brand-logo {
     background: rgb(179, 195, 108);
     width: 160px;
     margin-top: 8px;
-    /* position: absolute;
-    bottom: 0px; */
-}
-
-.enter-registration-label {
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-    padding-top: 3px;
-}
-
-.enter-registration-link {
-    padding: 1px 15px;
-    cursor: pointer;
-    color: white;
-}
-.enter-registration-link:active{
-color: #f8c8cb;
-}
-
-.main-search {
-    width: 60vw;
-    margin-left: auto;
-    margin-right: auto;
-
-    border: 2px solid;
-    border: #921d25;
-}
-
-.enter-registration-label i {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 @media (max-width: 1090px) {
