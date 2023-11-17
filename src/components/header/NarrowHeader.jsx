@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { Search } from '../search/Search';
+import { SmallSearch } from '../search/SmallSearch';
 import { SearchTypeSelection } from '../search_type_selection/SearchTypeSelection';
 
 import { SmallLogo } from './SmallLogo';
@@ -11,10 +11,12 @@ function NarrowHeader() {
     return (
         <>
             <div className='nh-top-line #ec407a pink lighten-1'>
-                <SmallLogo />
+                <div className='nh-small-logo'>
+                    <SmallLogo />
+                </div>
                 <div className='main-search'>
-                    <SearchTypeSelection cb={''} />
-                    <Search cb={'handleSearch'} />
+                    {/* <SearchTypeSelection cb={''} /> */}
+                    <SmallSearch cb={'handleSearch'} />
                 </div>
                 <div className='nh-icons-area'>
                     <div className='nh-header-market-section'>

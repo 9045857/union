@@ -1,0 +1,63 @@
+.sm-search-area {
+    height: 50px;
+    /* width: calc(100%-); */
+    /* padding: 30px; */
+    border: 3px solid;
+    color: rgb(179, 195, 108);
+    border-radius: 25px;
+    margin: 15px;
+
+    background-color: white;
+
+    position: relative;
+}
+
+.sm-search-select-input {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+.sm-select-search-type {
+    border-radius: 22px 0 0 22px;
+    width: 150px;
+    height: 44px;
+    border-right: 2px solid rgb(179, 195, 108);
+    margin-right: 10px; /* Пример: добавление отступа справа между блоками */
+    margin-top: -10px;
+}
+
+.search-bnt {
+    border-radius: 1rem;
+}
+
+.sm-input-field {
+    width: calc(100% - 300px) !important;
+}
+
+.search-bnt i {
+    font-size: 1.6rem;
+    line-height: 1.5 !important;
+}
+
+@media (max-width: 602px) {
+    .search-bnt span {
+        display: none;
+    }
+    .search-bnt {
+        width: 36px;
+        padding: 0 7px;
+    }
+    .search-bnt i {
+        font-size: 1.6rem;
+        line-height: 1.5 !important;
+    }
+
+    .sm-search-area input {
+        width: calc(100% - 50px) !important;
+    }
+
+    /* .search-type span {
+        padding: 0 1vw;
+        margin: 0 4vw;
+    } */
+}
