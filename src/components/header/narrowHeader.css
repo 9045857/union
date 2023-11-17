@@ -13,13 +13,7 @@ nav {
     justify-content: space-between;
 }
 
-.nh-small-logo,
-.nh-icons-area {
-    flex: 1; /* Равномерно распределяем пространство между левым и правым блоками */
-}
-
 .main-search {
-    flex: 2; /* Увеличиваем пространство центрального блока относительно левого и правого */
     text-align: center; /* Выравниваем текст по центру */
 }
 
@@ -28,7 +22,6 @@ nav {
     align-items: center;
     margin-left: auto; /* Прижимаем вправо */
     height: 100%; /* Добавьте высоту 100% */
-    /* margin-right: 0px; */
 }
 
 .nh-header-market-section {
@@ -59,12 +52,60 @@ nav {
     border: #d6d6d6;
 }
 
-@media (max-width: 1090px) {
+/* @media (max-width: 1090px) {
     .main-search {
         width: 50vw;
     }
+} */
+@media (max-width: 998px) {
+    .nh-top-line {
+        height: 160px;
+        position: relative;
+    }
+
+    .nh-icons-area {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 80px;
+    }
+    .nh-small-logo {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        height: 80px;
+    }
+    .main-search {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
+@media (max-width: 670px) {
+    .nh-top-line {
+        height: 220px;
+        position: relative;
+    }
+
+    .nh-icons-area {
+        position: absolute;
+        left: 10px;
+        top: 80px;
+        height: 80px;
+    }
+    .nh-small-logo {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .main-search {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+/* 
 @media (max-width: 992px) {
     nav {
         height: 250px;
@@ -77,4 +118,4 @@ nav {
     .slogan {
         display: none;
     }
-}
+} */

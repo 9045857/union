@@ -34,7 +34,7 @@ export const SmallSearch = ({ cb = Function.prototype }) => {
                 />
 
                 <button
-                    className='search-bnt btn #ec407a pink lighten-1'
+                    className='sm-search-bnt btn #ec407a pink lighten-1'
                     style={{ position: 'absolute', top: 4, right: 6 }}
                     onClick={handleSubmit}
                 >

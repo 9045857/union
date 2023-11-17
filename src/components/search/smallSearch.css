@@ -1,7 +1,5 @@
 .sm-search-area {
     height: 50px;
-    /* width: calc(100%-); */
-    /* padding: 30px; */
     border: 3px solid;
     color: rgb(179, 195, 108);
     border-radius: 25px;
@@ -14,7 +12,7 @@
 
 .sm-search-select-input {
     display: flex;
-    align-items: center; /* Выравнивание по центру по вертикали */
+    align-items: center;
 }
 
 .sm-select-search-type {
@@ -22,11 +20,11 @@
     width: 150px;
     height: 44px;
     border-right: 2px solid rgb(179, 195, 108);
-    margin-right: 10px; /* Пример: добавление отступа справа между блоками */
+    margin-right: 10px;
     margin-top: -10px;
 }
 
-.search-bnt {
+.sm-search-bnt {
     border-radius: 1rem;
 }
 
@@ -34,25 +32,35 @@
     width: calc(100% - 300px) !important;
 }
 
-.search-bnt i {
+.sm-search-bnt i {
     font-size: 1.6rem;
     line-height: 1.5 !important;
 }
 
-@media (max-width: 602px) {
-    .search-bnt span {
+@media (max-width: 1160px) {
+    .sm-select-search-type {
         display: none;
     }
-    .search-bnt {
+
+    .sm-input-field {
+        width: calc(100% - 60px) !important;
+        margin-left: 18px !important;
+    }
+    .sm-search-bnt span {
+        display: none;
+    }
+    .sm-search-bnt {
         width: 36px;
         padding: 0 7px;
     }
-    .search-bnt i {
+    .sm-search-bnt i {
         font-size: 1.6rem;
         line-height: 1.5 !important;
     }
+}
 
-    .sm-search-area input {
+@media (max-width: 1000px) {
+    .sm-sm-search-area input {
         width: calc(100% - 50px) !important;
     }
 
