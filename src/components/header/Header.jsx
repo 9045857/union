@@ -18,7 +18,7 @@ function Header() {
                         <i className=' material-icons header-market-icon person-icon'>
                             perm_identity
                         </i>
-                        <Link to='/login '>
+                        <Link to='/login'>
                             <span className='enter-registration-link'>
                                 Войти
                             </span>
