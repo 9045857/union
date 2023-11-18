@@ -4,6 +4,8 @@ import { useHistory } from 'react-router-dom';
 export const MarketplaceContext = createContext();
 
 export const ContextProvider = ({ children }) => {
+    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+
     //фиксируем в Товарах или Проиводителях будет идти поиск
     const [searchTypeSelected, setsearchTypeSelected] = useState('goods'); //goods или manufacturers
 

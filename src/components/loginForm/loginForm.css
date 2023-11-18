@@ -52,6 +52,10 @@
     color: #faae99;
 }
 
+.register-link > p {
+    color: #7b7b7b;
+}
+
 .login-button {
     width: 100%;
     background: rgb(179, 195, 108);

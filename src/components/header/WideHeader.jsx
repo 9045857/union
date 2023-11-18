@@ -52,7 +52,7 @@ function WideHeader() {
                 </div>
             </div>
             <div className=''>
-                <nav className='#ffffff white'>
+                <nav className='wh-nav #ffffff white'>
                     <Link
                         to='/'
                         className='brand-logo'

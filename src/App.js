@@ -17,6 +17,7 @@ import { IngredientList } from './pages/IngredientList';
 import { Meals } from './pages/Meals';
 
 import { ContextProvider } from './hooks/context';
+import { AuthProvider } from './hooks/authorization/AuthContext';
 
 import { RegistrationPage } from './pages/Registration/RegistrationPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
@@ -25,66 +26,68 @@ function App() {
     return (
         <>
             <Router basename='/chemical-union'>
-                <ContextProvider>
-                    <Header />
-                    <main className='container content'>
-                        <Switch>
-                            <Route
-                                exact //exect имеет отношение к path. Значит строгий адрес, в противном случае он будет рисоваться везде, где есть /, т.е. в каждом блоке ниже
-                                path='/'
-                                component={Home}
-                            />
-                            <Route
-                                path='/category/:category'
-                                component={Meals}
-                            />
-                            <Route
-                                path='/area/:area'
-                                component={Meals}
-                            />
-                            <Route
-                                path='/ingredient/:ingredient'
-                                component={Meals}
-                            />
+                <AuthProvider>
+                    <ContextProvider>
+                        <Header />
+                        <main className='container content'>
+                            <Switch>
+                                <Route
+                                    exact //exect имеет отношение к path. Значит строгий адрес, в противном случае он будет рисоваться везде, где есть /, т.е. в каждом блоке ниже
+                                    path='/'
+                                    component={Home}
+                                />
+                                <Route
+                                    path='/category/:category'
+                                    component={Meals}
+                                />
+                                <Route
+                                    path='/area/:area'
+                                    component={Meals}
+                                />
+                                <Route
+                                    path='/ingredient/:ingredient'
+                                    component={Meals}
+                                />
 
-                            <Route
-                                path='/about'
-                                component={About}
-                            />
-                            <Route
-                                path='/categories'
-                                component={CategoryList}
-                            />
-                            <Route
-                                path='/areas'
-                                component={AreaList}
-                            />
-                            <Route
-                                path='/ingredients/:number'
-                                component={IngredientList}
-                            />
-                            <Route
-                                path='/contact'
-                                component={Contact}
-                            />
-                            <Route
-                                path='/meal/:id'
-                                component={Meal}
-                            />
-                            <Route
-                                path='/join'
-                                component={RegistrationPage}
-                            />
-                            <Route
-                                path='/login'
-                                component={LoginPage}
-                            />
-                            <Route
-                                component={NotFound} //блок без path - нарисуется при вводе любого другого адреса, чем выше
-                            />
-                        </Switch>
-                    </main>
-                </ContextProvider>
+                                <Route
+                                    path='/about'
+                                    component={About}
+                                />
+                                <Route
+                                    path='/categories'
+                                    component={CategoryList}
+                                />
+                                <Route
+                                    path='/areas'
+                                    component={AreaList}
+                                />
+                                <Route
+                                    path='/ingredients/:number'
+                                    component={IngredientList}
+                                />
+                                <Route
+                                    path='/contact'
+                                    component={Contact}
+                                />
+                                <Route
+                                    path='/meal/:id'
+                                    component={Meal}
+                                />
+                                <Route
+                                    path='/join'
+                                    component={RegistrationPage}
+                                />
+                                <Route
+                                    path='/login'
+                                    component={LoginPage}
+                                />
+                                <Route
+                                    component={NotFound} //блок без path - нарисуется при вводе любого другого адреса, чем выше
+                                />
+                            </Switch>
+                        </main>
+                    </ContextProvider>
+                </AuthProvider>
                 <Footer />
             </Router>
         </>

@@ -56,7 +56,7 @@ function NarrowHeader() {
                 </div>
             </div>
             <div className=''>
-                <nav className='#ffffff white'></nav>
+                <nav className='nh-nav #ffffff white'></nav>
             </div>
         </>
     );
