@@ -22,6 +22,8 @@ import { AuthProvider } from './hooks/authorization/AuthContext';
 import { RegistrationPage } from './pages/Registration/RegistrationPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 
+import './components.css';
+
 function App() {
     return (
         <>

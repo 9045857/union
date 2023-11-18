@@ -1,4 +1,4 @@
-.wh-nav{
+.wh-nav {
     padding: 0 1rem;
     height: 140px;
 }
@@ -20,6 +20,7 @@
     align-items: center;
     margin-left: auto; /* Прижимаем вправо */
     height: 100%; /* Добавьте высоту 100% */
+    position: relative;
 }
 
 .header-market-icon {
@@ -90,6 +91,10 @@ nav .brand-logo {
     background: rgb(179, 195, 108);
     width: 160px;
     margin-top: 8px;
+}
+
+.user-icon-area {
+    position: relative;
 }
 
 @media (max-width: 1090px) {

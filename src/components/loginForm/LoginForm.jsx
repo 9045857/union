@@ -78,7 +78,7 @@ export const LoginForm = () => {
                 <button
                     type='button'
                     onClick={handleLogin}
-                    className='login-button btn '
+                    className='login-button cu-btn-blue '
                 >
                     Войти
                 </button>
