@@ -4,9 +4,9 @@ export const HoverUserCard = () => {
     return (
         <div
             className='hover-card hover-user-card'
-            style={{ top: 12, right: 250 }}
+            style={{ top: 12, right: 260 }}
         >
-            <p>Профиль</p>
+            <p className='hover-card-title'>Профиль</p>
             <p>Для оформления заказов, нужно войти в систему</p>
             <Link to='/login'>
                 <button className='btn-hover-user-card login cu-btn-pink '>

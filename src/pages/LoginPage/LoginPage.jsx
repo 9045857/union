@@ -4,8 +4,6 @@ import { LoginForm } from './../../components/loginForm/LoginForm'; // Укаж�
 export const LoginPage = () => {
     return (
         <div className='login-page'>
-            {/* <h1>Welcome to My Website</h1>
-            <p>Please log in to continue.</p> */}
             <LoginForm />
         </div>
     );

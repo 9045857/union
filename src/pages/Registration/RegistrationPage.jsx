@@ -4,8 +4,9 @@ import './registration.css';
 export const RegistrationPage = () => {
     const [countries, setCountries] = useState([
         'Россия',
+        'Белорусия',
         'Казахстан',
-        'Амэрика',
+        'Киргизия',
     ]);
     return (
         <div className='registration-container'>
@@ -40,8 +41,8 @@ export const RegistrationPage = () => {
                     id='role'
                     className='form-input'
                 >
-                    <option value='supplier'>Поставщик</option>
                     <option value='buyer'>Покупатель</option>
+                    <option value='supplier'>Поставщик</option>
                     <option value='both'>Оба</option>
                 </select>
                 <label>ФИО:</label>

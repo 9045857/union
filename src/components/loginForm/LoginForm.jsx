@@ -67,6 +67,10 @@ export const LoginForm = () => {
                         visibility_off
                     </i>
                 </div>
+                <label>
+                    <input type='checkbox' />
+                    <span className='remember-user-holder'> Запомнить</span>
+                </label>
                 <div className='forgot-password'>
                     <a
                         href='/reset-password'
