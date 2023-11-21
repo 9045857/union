@@ -14,12 +14,19 @@
     align-items: center;
     color: white;
 }
-
+/* .absolute-icon {
+    position: relative;
+} */
 .icons-area {
     display: flex;
     align-items: center;
     margin-left: auto; /* Прижимаем вправо */
     height: 100%; /* Добавьте высоту 100% */
+    position: relative;
+    z-index: 1;
+}
+
+.wh-icon-hover-area {
     position: relative;
 }
 

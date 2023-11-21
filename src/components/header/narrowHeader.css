@@ -22,6 +22,7 @@
     align-items: center;
     margin-left: auto; /* Прижимаем вправо */
     height: 100%; /* Добавьте высоту 100% */
+    z-index: 1;
 }
 
 .nh-header-market-section {
@@ -31,6 +32,10 @@
     justify-content: center;
     text-align: center;
     margin-right: 30px;
+}
+
+.nh-header-market-section-profile {
+    position: relative;
 }
 
 .nh-header-market-icon {

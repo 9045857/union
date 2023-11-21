@@ -1,25 +1,53 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { setTopLeftHover } from './hoverCardFunctions';
 
-export const HoverUserCard = () => {
+export const HoverUserCard = ({
+    isHoveredIcon,
+    iconCoordinates,
+    windowWidth,
+}) => {
+    const [isHoveredCard, setIsHoveredCard] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHoveredCard(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHoveredCard(false);
+    };
+
     return (
-        <div
-            className='hover-card hover-user-card'
-            style={{ top: 12, right: 260 }}
-        >
-            <p className='hover-card-title'>Профиль</p>
-            <p>Для оформления заказов, нужно войти в систему</p>
-            <Link to='/login'>
-                <button className='btn-hover-user-card login cu-btn-pink '>
-                    Войти
-                </button>
-            </Link>
+        <>
+            <div
+                className={`hover-card ${
+                    isHoveredIcon || isHoveredCard ? 'visible' : ''
+                }`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                style={setTopLeftHover(iconCoordinates, windowWidth)}
+            >
+                <p className='hover-card-title'>Профиль</p>
+                <p>Для оформления заказов, нужно войти в систему</p>
+                <Link to='/login'>
+                    <button
+                        className='btn-hover-user-card login cu-btn-pink '
+                        onClick={handleMouseLeave}
+                    >
+                        Войти
+                    </button>
+                </Link>
 
-            <p>или зарегистрироваться</p>
-            <Link to='/join'>
-                <button className='btn-hover-user-card auth cu-btn-pink '>
-                    Зарегистрироваться
-                </button>
-            </Link>
-        </div>
+                <p>или зарегистрироваться</p>
+                <Link to='/join'>
+                    <button
+                        className='btn-hover-user-card auth cu-btn-pink '
+                        onClick={handleMouseLeave}
+                    >
+                        Зарегистрироваться
+                    </button>
+                </Link>
+            </div>
+        </>
     );
 };

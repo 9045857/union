@@ -1,8 +1,28 @@
-export const HoverOrdersCard = () => {
+import { useState } from 'react';
+import { setTopLeftHover } from './hoverCardFunctions';
+
+export const HoverOrdersCard = ({
+    isHoveredIcon,
+    iconCoordinates,
+    windowWidth,
+}) => {
+    const [isHoveredCard, setIsHoveredCard] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHoveredCard(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHoveredCard(false);
+    };
     return (
         <div
-            className='hover-card hover-user-card'
-            style={{ top: 12, right: 0 }}
+            className={`hover-card ${
+                isHoveredIcon || isHoveredCard ? 'visible' : ''
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            style={setTopLeftHover(iconCoordinates, windowWidth)}
         >
             <p className='hover-card-title'>Заказы</p>
             <p>
