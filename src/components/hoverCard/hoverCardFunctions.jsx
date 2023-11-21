@@ -8,8 +8,6 @@ export const setTopLeftHover = (iconCoordinates, windowWidth) => {
     const halfIcon = Math.round(iconWidth / 2);
     const halfHover = Math.round(hoverWidth / 2);
 
-    // console.log('ширина экрана: ' + windowWidth);
-
     let hoverTop =
         iconCoordinates.bottom - iconCoordinates.top + hoverTopCompensation;
 

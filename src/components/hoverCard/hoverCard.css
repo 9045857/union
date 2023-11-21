@@ -1,9 +1,3 @@
-.hover-card-container {
-    /* display: none;
-    position: relative;
-    position: absolute; */
-}
-
 .hover-card.visible {
     display: block;
 }

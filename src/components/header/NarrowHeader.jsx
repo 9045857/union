@@ -72,8 +72,7 @@ function NarrowHeader() {
                 <div className='nh-small-logo'>
                     <SmallLogo />
                 </div>
-                <div className='main-search'>
-                    {/* <SearchTypeSelection cb={''} /> */}
+                <div className='nh-main-search'>
                     <SmallSearch cb={'handleSearch'} />
                 </div>
                 <div className='nh-icons-area'>

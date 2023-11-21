@@ -13,10 +13,6 @@
     justify-content: space-between;
 }
 
-.main-search {
-    text-align: center; /* Выравниваем текст по центру */
-}
-
 .nh-icons-area {
     display: flex;
     align-items: center;
@@ -44,17 +40,22 @@
 }
 
 .nh-header-market-title {
-    color: #ffffff;
+    color: rgb(238, 162, 185);
     margin: 0; /* Сбросить отступы */
 }
 
-.main-search {
+.nh-header-market-title:hover {
+    color: #ffffff;
+}
+
+.nh-main-search {
     width: 60vw;
     margin-left: auto;
     margin-right: auto;
 
     border: 2px solid;
     border: #d6d6d6;
+    text-align: center; /* Выравниваем текст по центру */
 }
 
 /* @media (max-width: 1090px) {
@@ -80,7 +81,7 @@
         top: 10px;
         height: 80px;
     }
-    .main-search {
+    .nh-main-search {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -104,7 +105,7 @@
         left: 10px;
         top: 10px;
     }
-    .main-search {
+    .nh-main-search {
         position: absolute;
         bottom: 0;
         width: 100%;

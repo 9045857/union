@@ -5,7 +5,7 @@ import { authReducer } from './authReducer';
 export const AuthContext = createContext();
 
 const initialState = {
-    isLoggedIn: false,
+    isLoggedIn: true,//false
     // Другие свойства, которые могут понадобиться
 };
 
