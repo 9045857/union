@@ -28,41 +28,28 @@ function setCoordinates(iconUserRef, setIconCoordinates) {
     }
 }
 
+const zero = {
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+};
+
 function WideHeader() {
     const [isUserHovered, setIsUserHovered] = useState(false);
     const [isOrdersHovered, setIsOrdersHovered] = useState(false);
     const [isMessageHovered, setIsMessageHovered] = useState(false);
     const [isCartHovered, setIsCartHovered] = useState(false);
 
+    const [iconUserCoordinates, setIconUserCoordinates] = useState(zero);
+    const [iconOrdersCoordinates, setIconOrdersCoordinates] = useState(zero);
+    const [iconMessageCoordinates, setIconMessageCoordinates] = useState(zero);
+    const [iconCartCoordinates, setIconCartCoordinates] = useState(zero);
+
     const iconUserRef = useRef(null);
     const iconOrdersRef = useRef(null);
     const iconMessageRef = useRef(null);
     const iconCartRef = useRef(null);
-
-    const [iconUserCoordinates, setIconUserCoordinates] = useState({
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-    });
-    const [iconOrdersCoordinates, setIconOrdersCoordinates] = useState({
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-    });
-    const [iconMessageCoordinates, setIconMessageCoordinates] = useState({
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-    });
-    const [iconCartCoordinates, setIconCartCoordinates] = useState({
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-    });
 
     const [windowWidth, setWindowWidth] = useState(
         document.documentElement.clientWidth
@@ -241,7 +228,7 @@ function WideHeader() {
                         </div>
                     </Link>
 
-                    <div className='main-search'>
+                    <div className='wh-main-search'>
                         <SearchTypeSelection cb={''} />
                         <Search cb={'handleSearch'} />
                     </div>

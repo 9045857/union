@@ -58,7 +58,7 @@
     color: #f8c8cb;
 }
 
-.main-search {
+.wh-main-search {
     width: 60vw;
     margin-left: auto;
     margin-right: auto;
@@ -104,18 +104,18 @@ nav .brand-logo {
     position: relative;
 }
 
-@media (max-width: 1090px) {
-    .main-search {
+@media (max-width: 1140px) {
+    .wh-main-search {
         width: 50vw;
     }
 }
 
 @media (max-width: 992px) {
-    nav {
+    .wh-nav {
         height: 250px;
     }
 
-    .main-search {
+    .wh-main-search {
         padding-top: 100px;
         width: 90%;
     }
