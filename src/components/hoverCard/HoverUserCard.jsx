@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { setTopLeftHover } from './hoverCardFunctions';
+import './hoverCard.css'; // Создайте файл стилей HoverCard.css
 
 export const HoverUserCard = ({
     isHoveredIcon,

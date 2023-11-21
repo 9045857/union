@@ -2,59 +2,69 @@ import { Link } from 'react-router-dom';
 import React, { useRef, useEffect, useState } from 'react';
 
 import { SmallSearch } from '../search/SmallSearch';
-import { SearchTypeSelection } from '../search_type_selection/SearchTypeSelection';
 
-import { HoverCard } from '../hoverCard/HoverCard';
+import { HoverProfileCard } from '../hoverCard/HoverProfileCard';
 
 import { SmallLogo } from './SmallLogo';
 
 import './narrowHeader.css';
 
-function NarrowHeader() {
-    const iconRef = useRef(null);
-    const [isHovered, setIsHovered] = useState(false);
-    const [iconType, setIconType] = useState('');
-    const [iconCoordinates, setIconCoordinates] = useState({
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-    });
+function setCoordinates(iconUserRef, setIconCoordinates) {
+    const iconElement = iconUserRef.current;
+    if (iconElement) {
+        const rect = iconElement.getBoundingClientRect();
 
-    const handleMouseEnter = (icon_type) => {
-        setIsHovered(true);
-        setIconType(icon_type);
+        setIconCoordinates(() => {
+            return {
+                top: rect.top,
+                left: rect.left,
+                bottom: rect.bottom,
+                right: rect.right,
+            };
+        });
+    }
+}
+
+const zero = {
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+};
+
+function NarrowHeader() {
+    const [isProfileHovered, setIsProfileHovered] = useState(false);
+    const [iconProfileCoordinates, setIconProfileCoordinates] = useState(zero);
+
+    const iconProfileRef = useRef(null);
+
+    const [windowWidth, setWindowWidth] = useState(
+        document.documentElement.clientWidth
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(document.documentElement.clientWidth);
+
+            setCoordinates(iconProfileRef, setIconProfileCoordinates);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const handleMouseEnter = () => {
+        setIsProfileHovered(true);
     };
 
     const handleMouseLeave = () => {
-        setIsHovered(false);
-        // setIconType('');
+        setIsProfileHovered(false);
     };
-
-    useEffect(() => {
-        const iconElement = iconRef.current;
-        if (iconElement) {
-            const rect = iconElement.getBoundingClientRect();
-            console.log('Top:', rect.top);
-            console.log('Left:', rect.left);
-            console.log('Bottom:', rect.bottom);
-            console.log('Right:', rect.right);
-
-            setIconCoordinates(() => {
-                return {
-                    top: rect.top,
-                    left: rect.left,
-                    bottom: rect.bottom,
-                    right: rect.right,
-                };
-            });
-
-            // console.log('iconCoordinates.Top:', iconCoordinates.top);
-            // console.log('iconCoordinates.Left:', iconCoordinates.left);
-            // console.log('iconCoordinates.Bottom:', iconCoordinates.bottom);
-            // console.log('iconCoordinatesRight:', iconCoordinates.right);
-        }
-    }, []); // Вызовется один раз при монтировании
 
     return (
         <>
@@ -69,8 +79,8 @@ function NarrowHeader() {
                 <div className='nh-icons-area'>
                     <div
                         className='nh-header-market-section nh-header-market-section-profile'
-                        ref={iconRef}
-                        onMouseEnter={() => handleMouseEnter('PROFILE')}
+                        ref={iconProfileRef}
+                        onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
                         <Link to='/login'>
@@ -80,10 +90,10 @@ function NarrowHeader() {
 
                             <p className='nh-header-market-title'>Профиль</p>
                         </Link>
-                        <HoverCard
-                            isHoveredIcon={isHovered}
-                            iconType={iconType}
-                            iconCoordinates={iconCoordinates}
+                        <HoverProfileCard
+                            isHoveredIcon={isProfileHovered}
+                            iconCoordinates={iconProfileCoordinates}
+                            windowWidth={windowWidth}
                         />
                     </div>
                     <div className='nh-header-market-section'>
