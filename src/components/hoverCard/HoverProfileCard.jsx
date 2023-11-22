@@ -36,46 +36,51 @@ export const HoverProfileCard = ({
             onMouseLeave={handleMouseLeave}
             style={setTopLeftHover(iconCoordinates, windowWidth)}
         >
-            <div className='hpc-personal-data'>
-                <div className='hpc-personal-photo'>
-                    <i class='material-icons'>camera_alt</i>
+            <Link to='/user-profile'>
+                <div className='hpc-personal-data'>
+                    <div className='hpc-personal-photo'>
+                        <i className='material-icons'>camera_alt</i>
+                    </div>
+                    <div className='hpc-personal-info'>
+                        <p className='hover-personal-title'>Александр</p>
+                        <p className='hover-personal-phone'>+7 913 931 45 56</p>
+                        <p className='hover-personal-page-link'>
+                            Личные данные
+                        </p>
+                    </div>
                 </div>
-                <div className='hpc-personal-info'>
-                    <p className='hover-personal-title'>Александр</p>
-                    <p className='hover-personal-phone'>+7 913 931 45 56</p>
-                    <p className='hover-personal-page-link'>Личные данные</p>
-                </div>
-            </div>
+            </Link>
+
             <p className='hpc-spacer'> </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>local_shipping</i>
+                <i className='material-icons'>local_shipping</i>
                 Доставки
             </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>monetization_on</i>
+                <i className='material-icons'>monetization_on</i>
                 Баланс 0 ₽
             </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>payment</i>
+                <i className='material-icons'>payment</i>
                 Способы оплаты
             </p>
             <p className='hpc-spacer'> </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>star</i> Избранное
+                <i className='material-icons'>star</i> Избранное
             </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>devices_other</i> Покупки
+                <i className='material-icons'>devices_other</i> Покупки
             </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>location_city</i>
+                <i className='material-icons'>location_city</i>
                 Любимые производители
             </p>
             <p className='hpc-spacer'> </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>style</i>Чеки
+                <i className='material-icons'>style</i>Чеки
             </p>
             <p className='hpc-section-name'>
-                <i class='material-icons'>work</i>Коммерческие предложения
+                <i className='material-icons'>work</i>Коммерческие предложения
             </p>
             <p className='hpc-spacer'> </p>
             <p className='hpc-section-name without-icon'>
@@ -84,12 +89,15 @@ export const HoverProfileCard = ({
             <p className='hpc-section-name without-icon'>Возвраты</p>
             <p className='hpc-section-name without-icon'>Отзывы и вопросы</p>
             <p className='hpc-spacer hpc-last-spacer'> </p>
-            <p
-                className='hpc-section-name without-icon'
-                onClick={handleExit}
-            >
-                Выйти
-            </p>
+
+            <Link to='/'>
+                <p
+                    className='hpc-section-name without-icon'
+                    onClick={handleExit}
+                >
+                    Выйти
+                </p>
+            </Link>
         </div>
     );
 };

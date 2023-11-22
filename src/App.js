@@ -21,6 +21,7 @@ import { AuthProvider } from './hooks/authorization/AuthContext';
 
 import { RegistrationPage } from './pages/Registration/RegistrationPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
+import { UserProfile } from './pages/UserProfile/UserProfile';
 
 import './components.css';
 
@@ -82,6 +83,10 @@ function App() {
                                 <Route
                                     path='/login'
                                     component={LoginPage}
+                                />
+                                <Route
+                                    path='/user-profile'
+                                    component={UserProfile}
                                 />
                                 <Route
                                     component={NotFound} //блок без path - нарисуется при вводе любого другого адреса, чем выше

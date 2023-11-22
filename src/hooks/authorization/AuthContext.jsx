@@ -5,8 +5,19 @@ import { authReducer } from './authReducer';
 export const AuthContext = createContext();
 
 const initialState = {
-    isLoggedIn: true,//false
+    isLoggedIn: true, //false
     // Другие свойства, которые могут понадобиться
+    userProfile: {
+        photo: '',
+        firstName: 'John',
+        lastName: 'Doe',
+        country: 'USA',
+        status: 'Buyer',
+        companyName: 'ABC Inc.',
+        phone: '+123456789',
+        email: 'john.doe@example.com',
+        password: '11111111',
+    },
 };
 
 export const AuthProvider = ({ children }) => {

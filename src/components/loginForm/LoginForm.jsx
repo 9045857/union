@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../../hooks/authorization/AuthContext';
 import { Link } from 'react-router-dom';
 import './loginForm.css';
 
@@ -7,8 +8,11 @@ export const LoginForm = () => {
     const [isPasswordInput, setIsPasswordInput] = useState(false);
     const [isVisibilityPassword, setisVisibilityPassword] = useState(false);
 
+    const { logIn } = useContext(AuthContext);
+
     const handleLogin = () => {
         // Обработка входа пользователя
+        logIn();
     };
 
     return (
@@ -79,13 +83,15 @@ export const LoginForm = () => {
                         Забыли пароль?
                     </a>
                 </div>
-                <button
-                    type='button'
-                    onClick={handleLogin}
-                    className='login-button cu-btn-blue '
-                >
-                    Войти
-                </button>
+                <Link to='/'>
+                    <button
+                        type='button'
+                        onClick={handleLogin}
+                        className='login-button cu-btn-blue '
+                    >
+                        Войти
+                    </button>
+                </Link>
             </form>
             <div className='register-link card-action'>
                 <p>

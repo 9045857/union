@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../hooks/authorization/AuthContext';
 import './registration.css';
 
 export const RegistrationPage = () => {
@@ -8,6 +10,12 @@ export const RegistrationPage = () => {
         'Казахстан',
         'Киргизия',
     ]);
+    const { logIn } = useContext(AuthContext);
+
+    const handleRegister = () => {
+        logIn();
+    };
+
     return (
         <div className='registration-container'>
             <h5 className='registration-container-title'>
@@ -115,13 +123,15 @@ export const RegistrationPage = () => {
                 />
                 <label htmlFor='captcha'>Введите код</label> */}
                 {/* <Captcha /> */}
-
-                <button
-                    type='submit'
-                    className='submit-button'
-                >
-                    Отправить
-                </button>
+                <Link to='/'>
+                    <button
+                        type='submit'
+                        className='submit-button'
+                        onClick={handleRegister}
+                    >
+                        Отправить
+                    </button>
+                </Link>
                 <div className='agreement'>
                     <p>
                         <label>
