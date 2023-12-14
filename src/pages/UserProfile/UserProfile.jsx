@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
-import './userProfile.css'; // Создайте файл стилей UserProfile.css
+import { AuthContext } from '../../hooks/authorization/AuthContext';
+import { useContext } from 'react';
+
+import { userBuyerSections } from '../../constants/data';
+import './userProfile.css';
+
+import { UserPersonalData } from './userProfileComponents/UserPersonalData';
+import { UserMainComponent } from './userProfileComponents/UserMainComponent';
 
 import userFacePhoto from '../../images/user/user-face.jpeg';
 
 export const UserProfile = () => {
     const [isEditing, setIsEditing] = useState(false);
+    // const [section, setSection] = useState('');
 
     const [userData, setUserData] = useState({
         photo: userFacePhoto,
@@ -17,6 +25,14 @@ export const UserProfile = () => {
         email: 'john.doe@example.com',
         password: '11111111',
     });
+
+    const {
+        userProfileSectionSelected,
+        selectUserProfileSection,
+        // isLoggedIn,
+        // logIn,
+        // logOut,
+    } = useContext(AuthContext);
 
     const handleEditClick = () => {
         setIsEditing(true);
@@ -69,94 +85,33 @@ export const UserProfile = () => {
                 </div>
             </div>
 
-            <label className='user-info-label'>
-                Страна:
-                <input
-                    className='user-info-input'
-                    type='text'
-                    name='country'
-                    value={userData.country}
-                    onChange={handleInputChange}
-                    disabled={!isEditing}
-                />
-            </label>
+            <div className='up-user-interface-sections'>
+                {userBuyerSections.map((s, index) => (
+                    <p
+                        key={index}
+                        id={s.name}
+                        className={`up-section ${
+                            s.name === userProfileSectionSelected
+                                ? 'up-section-selected'
+                                : ''
+                        }`}
+                        onClick={() => selectUserProfileSection(s.name)}
+                    >
+                        {s.title}
+                    </p>
+                ))}
+            </div>
 
-            <label className='user-info-label'>
-                Статус:
-                <select
-                    className='user-info-input'
-                    name='status'
-                    value={userData.status}
-                    onChange={handleInputChange}
-                    disabled={!isEditing}
-                >
-                    <option value='Buyer'>Покупатель</option>
-                    <option value='Supplier'>Поставщик</option>
-                    <option value='Both'>Оба</option>
-                </select>
-            </label>
-
-            <label className='user-info-label'>
-                Название Компании:
-                <input
-                    className='user-info-input'
-                    type='text'
-                    name='companyName'
-                    value={userData.companyName}
-                    onChange={handleInputChange}
-                    disabled={!isEditing}
+            {userProfileSectionSelected === 'personal-data' ? (
+                <UserPersonalData
+                    userData={userData}
+                    isEditing={isEditing}
+                    handleInputChange={handleInputChange}
+                    handleSaveClick={handleSaveClick}
+                    handleEditClick={handleEditClick}
                 />
-            </label>
-
-            <label className='user-info-label'>
-                Телефон:
-                <input
-                    className='user-info-input'
-                    type='tel'
-                    name='phone'
-                    value={userData.phone}
-                    onChange={handleInputChange}
-                    disabled={!isEditing}
-                />
-            </label>
-            <label className='user-info-label'>
-                Электронная почта:
-                <input
-                    className='user-info-input'
-                    type='email'
-                    name='email'
-                    value={userData.email}
-                    onChange={handleInputChange}
-                    disabled={!isEditing}
-                />
-            </label>
-
-            <label className='user-info-label'>
-                Пароль:
-                <input
-                    className='user-info-input'
-                    type='password'
-                    name='password'
-                    value={userData.password}
-                    onChange={handleInputChange}
-                    disabled={!isEditing}
-                />
-            </label>
-
-            {isEditing ? (
-                <button
-                    className='save-button'
-                    onClick={handleSaveClick}
-                >
-                    Сохранить
-                </button>
             ) : (
-                <button
-                    className='edit-button'
-                    onClick={handleEditClick}
-                >
-                    Редактировать
-                </button>
+                <UserMainComponent componentType={userProfileSectionSelected} />
             )}
         </div>
     );

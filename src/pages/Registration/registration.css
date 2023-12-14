@@ -49,6 +49,10 @@
     border-radius: 4px;
 }
 
+.label-focused-element {
+    color: rgb(38, 166, 154);
+}
+
 .submit-button {
     background-color: rgb(236, 64, 122);
     color: white;

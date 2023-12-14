@@ -31,7 +31,7 @@ export const SamplesContainer = ({ title = '', samples = [] }) => {
             let randomElements = getRandomElements(samples, 4);
             randomElements = addRandomPrice(randomElements);
             setItems(randomElements);
-            console.log(items);
+            // console.log(items);
         };
 
         fetchRandomElements();

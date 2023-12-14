@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 
 const initialState = {
     isLoggedIn: true, //false
+    userProfileSectionSelected: '', //выбранный раздел в профиле пользователя
     // Другие свойства, которые могут понадобиться
     userProfile: {
         photo: '',
@@ -29,6 +30,13 @@ export const AuthProvider = ({ children }) => {
 
     value.logOut = () => {
         dispatch({ type: 'LOGOUT' });
+    };
+
+    value.selectUserProfileSection = (section) => {
+        dispatch({
+            type: 'SET_SELECTED_USER_PROFILE_SECTION',
+            payload: section,
+        });
     };
 
     return (

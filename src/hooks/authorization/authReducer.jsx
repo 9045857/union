@@ -5,6 +5,10 @@ export function authReducer(state, { type, payload }) {
         case 'LOGOUT':
             return { ...state, isLoggedIn: false };
         // Другие типы действий, если необходимо
+
+        case 'SET_SELECTED_USER_PROFILE_SECTION':
+            return { ...state, userProfileSectionSelected: payload };
+
         default:
             return state;
     }

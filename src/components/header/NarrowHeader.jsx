@@ -82,15 +82,23 @@ function NarrowHeader() {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <Link to='/login'>
+                        <Link to='/user-profile'>
                             <i className=' material-icons nh-header-market-icon'>
                                 perm_identity
                             </i>
-
-                            <p className='nh-header-market-title'>Профиль</p>
+                            <p
+                                className={`nh-header-market-title ${
+                                    isProfileHovered
+                                        ? 'nh-icon-title-hovered'
+                                        : ''
+                                }`}
+                            >
+                                Профиль
+                            </p>
                         </Link>
                         <HoverProfileCard
                             isHoveredIcon={isProfileHovered}
+                            setIsProfileHovered={setIsProfileHovered}
                             iconCoordinates={iconProfileCoordinates}
                             windowWidth={windowWidth}
                         />
