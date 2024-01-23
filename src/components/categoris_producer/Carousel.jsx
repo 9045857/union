@@ -30,7 +30,7 @@ export const Carousel = ({ categories = [] }) => {
         if (firstCard) {
             setCardWidth(() => firstCard.offsetWidth);
         } else {
-            console.log('не нашел карту');
+            // console.log('не нашел карту');
         }
     };
 
