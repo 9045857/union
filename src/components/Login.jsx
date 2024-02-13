@@ -19,7 +19,7 @@ const Login = () => {
                     })
                 );
             })
-            .catch(console.error);
+            .catch(() => alert('Iinvalid user'));
 
         // signInWithEmailAndPassword(auth, email, password)
         //     .then((userCredential) => {

@@ -20,6 +20,10 @@ import { removeUser } from 'store/slices/userSlice';
 import { useDispatch } from 'react-redux';
 //<- redux
 
+//
+import { ImagesLoader } from '../../components/images_loader/ImagesLoader';
+//
+
 import './home.css';
 
 export const Home = () => {
@@ -89,8 +93,10 @@ export const Home = () => {
 
     return (
         <>
+            <ImagesLoader />
+
             <div>
-                <h3>Настриваем логин/регистрацию</h3>
+                <h3>Настрaиваем логин/регистрацию</h3>
                 <div>
                     <h4>Login</h4>
                     <Login />

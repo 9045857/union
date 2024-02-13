@@ -12,6 +12,7 @@
         "babel-runtime": "^6.26.0",
         "firebase": "^9.2.0",
         "gh-pages": "^5.0.0",
+        "node-sass": "^7.0.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-redux": "^9.0.4",
