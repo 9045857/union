@@ -1,0 +1,21 @@
+.upload {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+}
+
+.input {
+    display: none;
+}
+
+.wrapperPreview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}

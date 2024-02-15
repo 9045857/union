@@ -1,0 +1,45 @@
+.button{
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 36px;
+
+    transition: background .3s;
+
+}
+
+.primary{
+    background: #13a463;
+    color: white;
+
+    &:focus{
+        background: #13a463;
+    }
+
+    &:hover{
+        background: #12b26a;
+    }
+
+    &:active {
+        background: #168527;
+    }
+}
+
+.default {
+    background: #ffffff;
+    border: 1px black solid;
+
+    &:focus {
+            background: #ffffff;
+    }
+
+    &:hover {
+        border-color: grey;
+    }
+
+    &:active {
+        border-color: rgb(185, 185, 185);
+    }
+}

@@ -1,3 +1,10 @@
 .container{
-    
+    background-color: white;
+    border-radius: 25px;
+    height: 75vh;
+    padding: 20px;
+//ровняем по центру весь контент ->
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
