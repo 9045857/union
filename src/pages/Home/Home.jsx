@@ -25,6 +25,7 @@ import { ImagesLoader } from '../../components/images_loader/ImagesLoader';
 //
 
 import './home.css';
+import { FirebaseDatabaseAuthExample } from 'components/FirebaseDatabaseAuthExample/FirebaseDatabaseAuthExample';
 
 export const Home = () => {
     const [meals, setMeals] = useState([]);
@@ -93,6 +94,7 @@ export const Home = () => {
 
     return (
         <>
+            <FirebaseDatabaseAuthExample />
             <ImagesLoader />
 
             <div>

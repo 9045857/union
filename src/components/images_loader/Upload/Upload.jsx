@@ -37,7 +37,8 @@ export const Upload = () => {
 
         //заполняем временный массив картинками со стока
         for (const itemRef of items) {
-            const url = await getDownloadURL(itemRef);
+            const url = await getDownloadURL(itemRef); // получаем ссылку на место в хранилище
+            // console.log(url);
             const metadata = await getMetadata(itemRef);
 
             currentImages.push({
